@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1008299331244",
+    "project_id": "centrodiurnoancianos",
+    "storage_bucket": "centrodiurnoancianos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008299331244:android:1e89c2a0a5b50368015909",
+        "android_client_info": {
+          "package_name": "com.mycompany.centrodiurnoancianoshss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008299331244-famugernt31osgj324v3mtnhvuvco6gc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.centrodiurnoancianoshss",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1008299331244-n35p1lnt4n8hg685l0mfuscu533ml5ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5LM53yzobIo63fPr-9scFPedo8PkdLlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008299331244-5d7r27h13651kifhr5f7tuiv4cj7lpia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1008299331244-t13on0vslqa6nnf1b6n61asbem71fttt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.centrodiurnoancianoshss"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
