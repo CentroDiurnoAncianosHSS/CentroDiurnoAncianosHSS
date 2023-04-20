@@ -37,7 +37,9 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
     _model.txtEmailLoginController ??= TextEditingController();
     _model.txtPassLoginController ??= TextEditingController();
     _model.txtEmailSigninController ??= TextEditingController();
-    _model.txtDisplayNameSigninController ??= TextEditingController();
+    _model.txtUidSigninController ??= TextEditingController();
+    _model.txtDisplayNameSigninController1 ??= TextEditingController();
+    _model.txtDisplayNameSigninController2 ??= TextEditingController();
     _model.txtPassSigninController ??= TextEditingController();
     _model.txtVfyPassSigninController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -133,7 +135,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Rubik',
+                                        fontFamily: 'Montserrat',
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -183,13 +185,14 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'qq1deuyb' /* Ingrese su dirección de correo... */,
+                                                      'yaol9jen' /* Ingrese su dirección de correo... */,
                                                     ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Rubik',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .accent1,
@@ -201,14 +204,14 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'ku047vvz' /* Ejm: checho@gmail.com */,
+                                                      'ku047vvz' /* Ejm: xio@gmail.com */,
                                                     ),
                                                     hintStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Lexend Deca',
+                                                              'Montserrat',
                                                           color:
                                                               Color(0xA295A1AC),
                                                           fontSize: 14.0,
@@ -307,7 +310,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                        'h2vhigjz' /* Ingrese su contraseña */,
+                                                        'nsubwqji' /* Ingrese su contraseña */,
                                                       ),
                                                       labelStyle:
                                                           FlutterFlowTheme.of(
@@ -315,7 +318,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Rubik',
+                                                                    'Montserrat',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .accent1,
@@ -336,7 +339,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Lexend Deca',
+                                                                    'Montserrat',
                                                                 color: Color(
                                                                     0xA295A1AC),
                                                                 fontSize: 14.0,
@@ -489,7 +492,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                             .of(context)
                                                         .titleSmall
                                                         .override(
-                                                          fontFamily: 'Rubik',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
@@ -526,7 +530,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Rubik',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
@@ -547,7 +552,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -665,7 +671,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               ),
                                                               child: Container(
                                                                 width: 150.0,
-                                                                height: 45.0,
+                                                                height: 40.0,
                                                                 decoration:
                                                                     BoxDecoration(
                                                                   color: FlutterFlowTheme.of(
@@ -695,6 +701,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                         FlutterFlowLanguageSelector(
                                                                           width:
                                                                               150.0,
+                                                                          height:
+                                                                              40.0,
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).alternate,
                                                                           borderColor:
@@ -705,7 +713,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                               15.0,
                                                                           textStyle:
                                                                               GoogleFonts.getFont(
-                                                                            'Outfit',
+                                                                            'Montserrat',
                                                                             color:
                                                                                 Colors.white,
                                                                             fontWeight:
@@ -818,7 +826,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                                       'mh7a8kcw' /* Fecha: */,
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'Rubik',
+                                                                                          fontFamily: 'Montserrat',
                                                                                           color: FlutterFlowTheme.of(context).secondaryText,
                                                                                         ),
                                                                                   ),
@@ -829,7 +837,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                                         containerTipoCambioDolarResponse.jsonBody,
                                                                                       ).toString(),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Rubik',
+                                                                                            fontFamily: 'Montserrat',
                                                                                             color: FlutterFlowTheme.of(context).secondaryText,
                                                                                           ),
                                                                                     ),
@@ -847,7 +855,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                                         '2zamxllt' /* Tipo de cambio de dolar: */,
                                                                                       ),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Rubik',
+                                                                                            fontFamily: 'Montserrat',
                                                                                             color: FlutterFlowTheme.of(context).secondaryText,
                                                                                           ),
                                                                                     ),
@@ -858,7 +866,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                                           'wmzfcin2' /* $ */,
                                                                                         ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Rubik',
+                                                                                              fontFamily: 'Montserrat',
                                                                                               color: Color(0xFF379A37),
                                                                                             ),
                                                                                       ),
@@ -868,7 +876,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                                         containerTipoCambioDolarResponse.jsonBody,
                                                                                       ).toString(),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Rubik',
+                                                                                            fontFamily: 'Montserrat',
                                                                                             color: Color(0xFF379A37),
                                                                                           ),
                                                                                     ),
@@ -924,8 +932,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                 .circular(15.0),
                                                       ),
                                                       child: Container(
-                                                        width: 150.0,
-                                                        height: 150.0,
+                                                        width: 125.0,
+                                                        height: 125.0,
                                                         decoration:
                                                             BoxDecoration(
                                                           color: FlutterFlowTheme
@@ -1121,13 +1129,13 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 10.0, 0.0, 0.0),
+                                                        0.0, 15.0, 0.0, 0.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
                                                     Container(
-                                                      width: 250.0,
+                                                      width: 300.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
@@ -1145,13 +1153,19 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
+                                                            labelText:
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                              'l67vt9gs' /* Ingrese el correo electrónico */,
+                                                            ),
                                                             labelStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Rubik',
+                                                                          'Montserrat',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
@@ -1173,7 +1187,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Lexend Deca',
+                                                                          'Montserrat',
                                                                       color: Color(
                                                                           0xA295A1AC),
                                                                       fontSize:
@@ -1282,7 +1296,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Container(
-                                                      width: 250.0,
+                                                      width: 300.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
@@ -1296,17 +1310,23 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                         width: 300.0,
                                                         child: TextFormField(
                                                           controller: _model
-                                                              .txtDisplayNameSigninController,
+                                                              .txtUidSigninController,
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
+                                                            labelText:
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                              'ewlhlpr1' /* Ingrese una identificación */,
+                                                            ),
                                                             labelStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Rubik',
+                                                                          'Montserrat',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
@@ -1320,7 +1340,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                              'xffhf47s' /* Nombre */,
+                                                              '5t543o4g' /* Cédula */,
                                                             ),
                                                             hintStyle:
                                                                 FlutterFlowTheme.of(
@@ -1328,7 +1348,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Lexend Deca',
+                                                                          'Montserrat',
                                                                       color: Color(
                                                                           0xA295A1AC),
                                                                       fontSize:
@@ -1419,7 +1439,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               TextInputType
                                                                   .emailAddress,
                                                           validator: _model
-                                                              .txtDisplayNameSigninControllerValidator
+                                                              .txtUidSigninControllerValidator
                                                               .asValidator(
                                                                   context),
                                                         ),
@@ -1437,7 +1457,316 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Container(
-                                                      width: 250.0,
+                                                      width: 300.0,
+                                                      height: 50.0,
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0x00E1E1E1),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(15.0),
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Container(
+                                                            width: 145.0,
+                                                            child:
+                                                                TextFormField(
+                                                              controller: _model
+                                                                  .txtDisplayNameSigninController1,
+                                                              obscureText:
+                                                                  false,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                labelText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'vfamjnk8' /* Nombre Usuario */,
+                                                                ),
+                                                                labelStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                                hintText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'xffhf47s' /* Nombre */,
+                                                                ),
+                                                                hintStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: Color(
+                                                                          0xA295A1AC),
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                focusedBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                errorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                focusedErrorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                filled: true,
+                                                                fillColor: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                contentPadding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            20.0,
+                                                                            24.0,
+                                                                            20.0,
+                                                                            24.0),
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .titleSmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Outfit',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                    fontSize:
+                                                                        14.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal,
+                                                                  ),
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .emailAddress,
+                                                              validator: _model
+                                                                  .txtDisplayNameSigninController1Validator
+                                                                  .asValidator(
+                                                                      context),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            width: 145.0,
+                                                            child:
+                                                                TextFormField(
+                                                              controller: _model
+                                                                  .txtDisplayNameSigninController2,
+                                                              obscureText:
+                                                                  false,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                labelText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'eruwml9h' /* Número teléfono */,
+                                                                ),
+                                                                labelStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                                hintText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'wzuxia9g' /* Nombre */,
+                                                                ),
+                                                                hintStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: Color(
+                                                                          0xA295A1AC),
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                    ),
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                focusedBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                errorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                focusedErrorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              15.0),
+                                                                ),
+                                                                filled: true,
+                                                                fillColor: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                contentPadding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            20.0,
+                                                                            24.0,
+                                                                            20.0,
+                                                                            24.0),
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .titleSmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Outfit',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                    fontSize:
+                                                                        14.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal,
+                                                                  ),
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .emailAddress,
+                                                              validator: _model
+                                                                  .txtDisplayNameSigninController2Validator
+                                                                  .asValidator(
+                                                                      context),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 10.0, 0.0, 0.0),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    Container(
+                                                      width: 300.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
@@ -1456,13 +1785,19 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               .txtPassSigninVisibility,
                                                           decoration:
                                                               InputDecoration(
+                                                            labelText:
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                              'a393whc2' /* Ingrese su contraseña mayor 6 ... */,
+                                                            ),
                                                             labelStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Rubik',
+                                                                          'Montserrat',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
@@ -1484,7 +1819,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Lexend Deca',
+                                                                          'Montserrat',
                                                                       color: Color(
                                                                           0xA295A1AC),
                                                                       fontSize:
@@ -1606,13 +1941,13 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 20.0, 0.0, 0.0),
+                                                        0.0, 10.0, 0.0, 0.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
                                                     Container(
-                                                      width: 250.0,
+                                                      width: 300.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
@@ -1631,13 +1966,19 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                               .txtVfyPassSigninVisibility,
                                                           decoration:
                                                               InputDecoration(
+                                                            labelText:
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                              'ye3pvrq3' /* Ingrese nuevamente su contrase... */,
+                                                            ),
                                                             labelStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Rubik',
+                                                                          'Montserrat',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText,
@@ -1659,7 +2000,7 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Lexend Deca',
+                                                                          'Montserrat',
                                                                       color: Color(
                                                                           0xA295A1AC),
                                                                       fontSize:
@@ -1826,11 +2167,16 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                           .txtEmailLoginController
                                                           .text,
                                                       displayName: _model
-                                                          .txtDisplayNameSigninController
+                                                          .txtDisplayNameSigninController1
                                                           .text,
                                                       photoUrl: FFAppState()
                                                           .ImageUserSignin,
-                                                      uid: '',
+                                                      uid: _model
+                                                          .txtUidSigninController
+                                                          .text,
+                                                      createdTime:
+                                                          getCurrentTimestamp,
+                                                      phoneNumber: '',
                                                     );
                                                     await UsersRecord.collection
                                                         .doc(user.uid)
@@ -1886,7 +2232,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                             .of(context)
                                                         .titleSmall
                                                         .override(
-                                                          fontFamily: 'Outfit',
+                                                          fontFamily:
+                                                              'Montserrat',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
@@ -1918,7 +2265,8 @@ class _LoginSigninWidgetState extends State<LoginSigninWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            'Montserrat',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)

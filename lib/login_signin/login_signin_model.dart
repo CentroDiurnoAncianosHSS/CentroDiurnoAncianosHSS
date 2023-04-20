@@ -32,10 +32,17 @@ class LoginSigninModel extends FlutterFlowModel {
   // State field(s) for txtEmailSignin widget.
   TextEditingController? txtEmailSigninController;
   String? Function(BuildContext, String?)? txtEmailSigninControllerValidator;
+  // State field(s) for txtUidSignin widget.
+  TextEditingController? txtUidSigninController;
+  String? Function(BuildContext, String?)? txtUidSigninControllerValidator;
   // State field(s) for txtDisplayNameSignin widget.
-  TextEditingController? txtDisplayNameSigninController;
+  TextEditingController? txtDisplayNameSigninController1;
   String? Function(BuildContext, String?)?
-      txtDisplayNameSigninControllerValidator;
+      txtDisplayNameSigninController1Validator;
+  // State field(s) for txtDisplayNameSignin widget.
+  TextEditingController? txtDisplayNameSigninController2;
+  String? Function(BuildContext, String?)?
+      txtDisplayNameSigninController2Validator;
   // State field(s) for txtPassSignin widget.
   TextEditingController? txtPassSigninController;
   late bool txtPassSigninVisibility;
@@ -57,7 +64,9 @@ class LoginSigninModel extends FlutterFlowModel {
     txtEmailLoginController?.dispose();
     txtPassLoginController?.dispose();
     txtEmailSigninController?.dispose();
-    txtDisplayNameSigninController?.dispose();
+    txtUidSigninController?.dispose();
+    txtDisplayNameSigninController1?.dispose();
+    txtDisplayNameSigninController2?.dispose();
     txtPassSigninController?.dispose();
     txtVfyPassSigninController?.dispose();
   }
