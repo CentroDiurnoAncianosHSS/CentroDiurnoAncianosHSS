@@ -61,7 +61,7 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
             size: 20.0,
           ),
           onPressed: () async {
-            context.pop();
+            context.pushNamed('Login');
           },
         ),
         title: Text(
@@ -81,7 +81,7 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          color: FlutterFlowTheme.of(context).primaryBackground,
         ),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
@@ -138,7 +138,7 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                       width: 300.0,
                       height: 121.5,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondary,
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
@@ -163,7 +163,7 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
-                                    fontFamily: 'Outfit',
+                                    fontFamily: 'Montserrat',
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
                                     fontSize: 14.0,
@@ -185,21 +185,21 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
-                        'zzg07uk9' /* Su dirección de correo electro... */,
+                        'zzg07uk9' /* Ingrese su dirección de correo... */,
                       ),
                       labelStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
-                                fontFamily: 'Outfit',
+                                fontFamily: 'Montserrat',
                                 color: FlutterFlowTheme.of(context).accent2,
                                 fontSize: 14.0,
                               ),
                       hintText: FFLocalizations.of(context).getText(
-                        'qjmr8bon' /* Ingrese su correo electronico.... */,
+                        'qjmr8bon' /* Ejm: xio@gmail.com */,
                       ),
                       hintStyle:
                           FlutterFlowTheme.of(context).bodyMedium.override(
-                                fontFamily: 'Lexend Deca',
-                                color: FlutterFlowTheme.of(context).accent2,
+                                fontFamily: 'Montserrat',
+                                color: Color(0xA295A1AC),
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.normal,
                               ),
@@ -232,7 +232,8 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       filled: true,
-                      fillColor: FlutterFlowTheme.of(context).secondary,
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 20.0, 24.0),
                     ),
@@ -311,15 +312,15 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                       await authManager.signOut();
                       GoRouter.of(context).clearRedirectLocation();
 
-                      context.pushNamedAuth('LoginSignin', mounted);
+                      context.pushNamedAuth('Login', mounted);
                     }
                   },
                   text: FFLocalizations.of(context).getText(
                     'feqx8b6v' /* Enviar enlace */,
                   ),
                   options: FFButtonOptions(
-                    width: 300.0,
-                    height: 50.0,
+                    width: 250.0,
+                    height: 40.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -359,14 +360,14 @@ class _ForgotYourPasswordWidgetState extends State<ForgotYourPasswordWidget> {
                       },
                     );
 
-                    context.pushNamed('LoginSignin');
+                    context.pushNamed('Login');
                   },
                   text: FFLocalizations.of(context).getText(
                     'sbixvcd1' /* Cancelar */,
                   ),
                   options: FFButtonOptions(
-                    width: 200.0,
-                    height: 40.0,
+                    width: 150.0,
+                    height: 30.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),

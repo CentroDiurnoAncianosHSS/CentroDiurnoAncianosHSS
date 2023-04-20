@@ -70,30 +70,48 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : LoginSigninWidget(),
+          appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? HomePageWidget()
-              : LoginSigninWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
+          routes: [
+            FFRoute(
+              name: 'Login',
+              path: 'login',
+              builder: (context, params) => LoginWidget(),
+            ),
+            FFRoute(
+              name: 'HomePage',
+              path: 'homePage',
+              requireAuth: true,
+              builder: (context, params) => HomePageWidget(),
+            ),
+            FFRoute(
+              name: 'ForgotYourPassword',
+              path: 'forgotYourPassword',
+              builder: (context, params) => ForgotYourPasswordWidget(),
+            ),
+            FFRoute(
+              name: 'Users',
+              path: 'users',
+              requireAuth: true,
+              asyncParams: {
+                'admin': getDoc(['users'], UsersRecord.serializer),
+              },
+              builder: (context, params) => UsersWidget(
+                admin: params.getParam('admin', ParamType.Document),
+              ),
+            ),
+            FFRoute(
+              name: 'addUser',
+              path: 'addUser',
+              builder: (context, params) => AddUserWidget(),
+            )
+          ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
-        FFRoute(
-          name: 'LoginSignin',
-          path: '/loginSignin',
-          builder: (context, params) => LoginSigninWidget(),
-        ),
-        FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => HomePageWidget(),
-        ),
-        FFRoute(
-          name: 'ForgotYourPassword',
-          path: '/forgotYourPassword',
-          builder: (context, params) => ForgotYourPasswordWidget(),
-        )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
     );
@@ -261,7 +279,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/loginSignin';
+            return '/login';
           }
           return null;
         },

@@ -1,29 +1,22 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
-import '/flutter_flow/flutter_flow_language_selector.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-class LoginSigninModel extends FlutterFlowModel {
+class AddUserModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for txtEmailLogin widget.
-  TextEditingController? txtEmailLoginController;
-  String? Function(BuildContext, String?)? txtEmailLoginControllerValidator;
-  // State field(s) for txtPassLogin widget.
-  TextEditingController? txtPassLoginController;
-  late bool txtPassLoginVisibility;
-  String? Function(BuildContext, String?)? txtPassLoginControllerValidator;
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -36,13 +29,12 @@ class LoginSigninModel extends FlutterFlowModel {
   TextEditingController? txtUidSigninController;
   String? Function(BuildContext, String?)? txtUidSigninControllerValidator;
   // State field(s) for txtDisplayNameSignin widget.
-  TextEditingController? txtDisplayNameSigninController1;
+  TextEditingController? txtDisplayNameSigninController;
   String? Function(BuildContext, String?)?
-      txtDisplayNameSigninController1Validator;
-  // State field(s) for txtDisplayNameSignin widget.
-  TextEditingController? txtDisplayNameSigninController2;
-  String? Function(BuildContext, String?)?
-      txtDisplayNameSigninController2Validator;
+      txtDisplayNameSigninControllerValidator;
+  // State field(s) for txtPhoneNumber widget.
+  TextEditingController? txtPhoneNumberController;
+  String? Function(BuildContext, String?)? txtPhoneNumberControllerValidator;
   // State field(s) for txtPassSignin widget.
   TextEditingController? txtPassSigninController;
   late bool txtPassSigninVisibility;
@@ -55,18 +47,15 @@ class LoginSigninModel extends FlutterFlowModel {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
-    txtPassLoginVisibility = false;
     txtPassSigninVisibility = false;
     txtVfyPassSigninVisibility = false;
   }
 
   void dispose() {
-    txtEmailLoginController?.dispose();
-    txtPassLoginController?.dispose();
     txtEmailSigninController?.dispose();
     txtUidSigninController?.dispose();
-    txtDisplayNameSigninController1?.dispose();
-    txtDisplayNameSigninController2?.dispose();
+    txtDisplayNameSigninController?.dispose();
+    txtPhoneNumberController?.dispose();
     txtPassSigninController?.dispose();
     txtVfyPassSigninController?.dispose();
   }
