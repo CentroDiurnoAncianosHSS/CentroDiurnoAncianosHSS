@@ -70,13 +70,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
+          appStateNotifier.loggedIn ? AdminHomePageWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
+              appStateNotifier.loggedIn ? AdminHomePageWidget() : LoginWidget(),
           routes: [
             FFRoute(
               name: 'Login',
@@ -84,31 +84,63 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => LoginWidget(),
             ),
             FFRoute(
-              name: 'HomePage',
-              path: 'homePage',
+              name: 'AdminHomePage',
+              path: 'adminHomePage',
               requireAuth: true,
-              builder: (context, params) => HomePageWidget(),
+              builder: (context, params) => AdminHomePageWidget(),
             ),
             FFRoute(
-              name: 'ForgotYourPassword',
-              path: 'forgotYourPassword',
-              builder: (context, params) => ForgotYourPasswordWidget(),
+              name: 'EveryoneForgotYourPassword',
+              path: 'everyoneForgotYourPassword',
+              builder: (context, params) => EveryoneForgotYourPasswordWidget(),
             ),
             FFRoute(
-              name: 'Users',
-              path: 'users',
+              name: 'AdminUsersPage',
+              path: 'adminUsersPage',
               requireAuth: true,
               asyncParams: {
                 'admin': getDoc(['users'], UsersRecord.serializer),
               },
-              builder: (context, params) => UsersWidget(
+              builder: (context, params) => AdminUsersPageWidget(
                 admin: params.getParam('admin', ParamType.Document),
               ),
             ),
             FFRoute(
-              name: 'addUser',
-              path: 'addUser',
-              builder: (context, params) => AddUserWidget(),
+              name: 'AdminAddUser',
+              path: 'adminAddUser',
+              builder: (context, params) => AdminAddUserWidget(),
+            ),
+            FFRoute(
+              name: 'CounterHomePage',
+              path: 'counterHomePage',
+              requireAuth: true,
+              builder: (context, params) => CounterHomePageWidget(),
+            ),
+            FFRoute(
+              name: 'AdminListUserAdmin',
+              path: 'adminListUserAdmin',
+              requireAuth: true,
+              asyncParams: {
+                'detalleAdministradores':
+                    getDoc(['users'], UsersRecord.serializer),
+              },
+              builder: (context, params) => AdminListUserAdminWidget(
+                detalleAdministradores: params.getParam(
+                    'detalleAdministradores', ParamType.Document),
+              ),
+            ),
+            FFRoute(
+              name: 'AdminListUserCounter',
+              path: 'adminListUserColaboradores',
+              requireAuth: true,
+              asyncParams: {
+                'detalleColaboradores':
+                    getDoc(['users'], UsersRecord.serializer),
+              },
+              builder: (context, params) => AdminListUserCounterWidget(
+                detalleColaboradores:
+                    params.getParam('detalleColaboradores', ParamType.Document),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

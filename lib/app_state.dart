@@ -31,6 +31,18 @@ class FFAppState extends ChangeNotifier {
   set ImageUserSignin(String _value) {
     _ImageUserSignin = _value;
   }
+
+  String _imageUserEditCounter = '';
+  String get imageUserEditCounter => _imageUserEditCounter;
+  set imageUserEditCounter(String _value) {
+    _imageUserEditCounter = _value;
+  }
+
+  String _imageUserEditAdmin = '';
+  String get imageUserEditAdmin => _imageUserEditAdmin;
+  set imageUserEditAdmin(String _value) {
+    _imageUserEditAdmin = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

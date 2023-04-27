@@ -1,20 +1,21 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-class AddUserModel extends FlutterFlowModel {
+class AdminAddUserModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   bool isDataUploading = false;
@@ -28,6 +29,9 @@ class AddUserModel extends FlutterFlowModel {
   // State field(s) for txtUidSignin widget.
   TextEditingController? txtUidSigninController;
   String? Function(BuildContext, String?)? txtUidSigninControllerValidator;
+  // State field(s) for ddRolUsuario widget.
+  String? ddRolUsuarioValue;
+  FormFieldController<String>? ddRolUsuarioValueController;
   // State field(s) for txtDisplayNameSignin widget.
   TextEditingController? txtDisplayNameSigninController;
   String? Function(BuildContext, String?)?

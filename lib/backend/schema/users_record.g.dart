@@ -61,6 +61,31 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.rol;
+    if (value != null) {
+      result
+        ..add('rol')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.users;
+    if (value != null) {
+      result
+        ..add('users')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(
+                  DocumentReference, const [const FullType.nullable(Object)])
+            ])));
+    }
+    value = object.userDetails;
+    if (value != null) {
+      result
+        ..add('UserDetails')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                DocumentReference, const [const FullType.nullable(Object)])));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -107,6 +132,23 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
           result.phoneNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
+        case 'rol':
+          result.rol = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'users':
+          result.users.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    DocumentReference, const [const FullType.nullable(Object)])
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'UserDetails':
+          result.userDetails = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -134,6 +176,12 @@ class _$UsersRecord extends UsersRecord {
   @override
   final String? phoneNumber;
   @override
+  final String? rol;
+  @override
+  final BuiltList<DocumentReference<Object?>>? users;
+  @override
+  final DocumentReference<Object?>? userDetails;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
@@ -146,6 +194,9 @@ class _$UsersRecord extends UsersRecord {
       this.uid,
       this.createdTime,
       this.phoneNumber,
+      this.rol,
+      this.users,
+      this.userDetails,
       this.ffRef})
       : super._();
 
@@ -166,6 +217,9 @@ class _$UsersRecord extends UsersRecord {
         uid == other.uid &&
         createdTime == other.createdTime &&
         phoneNumber == other.phoneNumber &&
+        rol == other.rol &&
+        users == other.users &&
+        userDetails == other.userDetails &&
         ffRef == other.ffRef;
   }
 
@@ -178,6 +232,9 @@ class _$UsersRecord extends UsersRecord {
     _$hash = $jc(_$hash, uid.hashCode);
     _$hash = $jc(_$hash, createdTime.hashCode);
     _$hash = $jc(_$hash, phoneNumber.hashCode);
+    _$hash = $jc(_$hash, rol.hashCode);
+    _$hash = $jc(_$hash, users.hashCode);
+    _$hash = $jc(_$hash, userDetails.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -192,6 +249,9 @@ class _$UsersRecord extends UsersRecord {
           ..add('uid', uid)
           ..add('createdTime', createdTime)
           ..add('phoneNumber', phoneNumber)
+          ..add('rol', rol)
+          ..add('users', users)
+          ..add('userDetails', userDetails)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -224,6 +284,21 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   String? get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String? phoneNumber) => _$this._phoneNumber = phoneNumber;
 
+  String? _rol;
+  String? get rol => _$this._rol;
+  set rol(String? rol) => _$this._rol = rol;
+
+  ListBuilder<DocumentReference<Object?>>? _users;
+  ListBuilder<DocumentReference<Object?>> get users =>
+      _$this._users ??= new ListBuilder<DocumentReference<Object?>>();
+  set users(ListBuilder<DocumentReference<Object?>>? users) =>
+      _$this._users = users;
+
+  DocumentReference<Object?>? _userDetails;
+  DocumentReference<Object?>? get userDetails => _$this._userDetails;
+  set userDetails(DocumentReference<Object?>? userDetails) =>
+      _$this._userDetails = userDetails;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -241,6 +316,9 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _uid = $v.uid;
       _createdTime = $v.createdTime;
       _phoneNumber = $v.phoneNumber;
+      _rol = $v.rol;
+      _users = $v.users?.toBuilder();
+      _userDetails = $v.userDetails;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -262,15 +340,31 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   UsersRecord build() => _build();
 
   _$UsersRecord _build() {
-    final _$result = _$v ??
-        new _$UsersRecord._(
-            email: email,
-            displayName: displayName,
-            photoUrl: photoUrl,
-            uid: uid,
-            createdTime: createdTime,
-            phoneNumber: phoneNumber,
-            ffRef: ffRef);
+    _$UsersRecord _$result;
+    try {
+      _$result = _$v ??
+          new _$UsersRecord._(
+              email: email,
+              displayName: displayName,
+              photoUrl: photoUrl,
+              uid: uid,
+              createdTime: createdTime,
+              phoneNumber: phoneNumber,
+              rol: rol,
+              users: _users?.build(),
+              userDetails: userDetails,
+              ffRef: ffRef);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'users';
+        _users?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'UsersRecord', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

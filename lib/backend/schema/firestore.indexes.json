@@ -1,3 +1,18 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "rol",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "display_name",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
 }
