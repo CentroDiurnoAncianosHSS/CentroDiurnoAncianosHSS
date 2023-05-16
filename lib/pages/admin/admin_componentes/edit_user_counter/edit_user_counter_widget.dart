@@ -572,49 +572,54 @@ class _EditUserCounterWidgetState extends State<EditUserCounterWidget>
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 5.0, 5.0, 5.0),
-                                  child: FlutterFlowDropDown<String>(
-                                    controller:
-                                        _model.ddRolUsuarioValueController ??=
-                                            FormFieldController<String>(
-                                      _model.ddRolUsuarioValue ??=
-                                          widget.editUserCounter!.rol,
-                                    ),
-                                    options: [
-                                      FFLocalizations.of(context).getText(
-                                        'ayds286g' /* Administrador */,
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 5.0, 5.0, 5.0),
+                                    child: FlutterFlowDropDown<String>(
+                                      controller:
+                                          _model.ddRolUsuarioValueController ??=
+                                              FormFieldController<String>(
+                                        _model.ddRolUsuarioValue ??=
+                                            widget.editUserCounter!.rol,
                                       ),
-                                      FFLocalizations.of(context).getText(
-                                        '9hzyq6q5' /* Contador */,
-                                      )
-                                    ],
-                                    onChanged: (val) => setState(
-                                        () => _model.ddRolUsuarioValue = val),
-                                    width: 180.0,
-                                    height: 50.0,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                        ),
-                                    hintText:
+                                      options: [
                                         FFLocalizations.of(context).getText(
-                                      '0kche651' /* Seleccione el rol */,
+                                          'ayds286g' /* Administrador */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          '9hzyq6q5' /* Contador */,
+                                        ),
+                                        FFLocalizations.of(context).getText(
+                                          'xtu7mdai' /* Usuario deshabilitado */,
+                                        )
+                                      ],
+                                      onChanged: (val) => setState(
+                                          () => _model.ddRolUsuarioValue = val),
+                                      width: 180.0,
+                                      height: 50.0,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Outfit',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                          ),
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '0kche651' /* Seleccione el rol */,
+                                      ),
+                                      fillColor:
+                                          FlutterFlowTheme.of(context).tertiary,
+                                      elevation: 5.0,
+                                      borderColor: Colors.transparent,
+                                      borderWidth: 0.0,
+                                      borderRadius: 15.0,
+                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 4.0, 12.0, 4.0),
+                                      hidesUnderline: true,
+                                      isSearchable: false,
                                     ),
-                                    fillColor:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    elevation: 5.0,
-                                    borderColor: Colors.transparent,
-                                    borderWidth: 0.0,
-                                    borderRadius: 15.0,
-                                    margin: EdgeInsetsDirectional.fromSTEB(
-                                        12.0, 4.0, 12.0, 4.0),
-                                    hidesUnderline: true,
-                                    isSearchable: false,
                                   ),
                                 ),
                               ],

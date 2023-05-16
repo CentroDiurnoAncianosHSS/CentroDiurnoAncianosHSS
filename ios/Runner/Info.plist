@@ -63,10 +63,23 @@
 	<true/>
 
 	<key>NSCameraUsageDescription</key>
-    <string>In order to take a picture or video, this app requires permission to access the camera.</string>
+    <string>La app necesita obtener acceso a la camara</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-    <string>In order to upload data, this app requires permission to access the photo library.</string>
-
+    <string>La app necesita obtener acceso a Bluetooth</string>
+	<key>PermissionGroupNotification</key>
+    <string>La app necesita obtener acceso a las notificaciones</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>La app necesita obtener acceso al microfono</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>La app necesita obtener acceso a la localizacion</string>
+	<key>NSContactsUsageDescription</key>
+    <string>La app necesita obtener acceso a los contactos</string>
+	<key>NSCalendarsUsageDescription</key>
+    <string>La app necesita obtener acceso al calendario</string>
+	<key>NSFaceIDUsageDescription</key>
+    <string>La app necesita obtener acceso a la seguridad</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+    <string>La app necesita obtener acceso a Bluetooth</string>
 
 
 	<key>UILaunchStoryboardName</key>

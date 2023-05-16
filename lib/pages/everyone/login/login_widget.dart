@@ -637,104 +637,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 15.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '1fwd8jil' /* ---  O usar  --- */,
-                                                      ),
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Montserrat',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
-                                                              ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 15.0,
-                                                                0.0, 0.0),
-                                                    child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        GoRouter.of(context)
-                                                            .prepareAuthEvent();
-                                                        final user =
-                                                            await authManager
-                                                                .signInWithGoogle(
-                                                                    context);
-                                                        if (user == null) {
-                                                          return;
-                                                        }
-
-                                                        context.goNamedAuth(
-                                                            'AdminHomePage',
-                                                            mounted);
-                                                      },
-                                                      text: FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'j5wmx7a2' /* G */,
-                                                      ),
-                                                      options: FFButtonOptions(
-                                                        width: 40.0,
-                                                        height: 40.0,
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        iconPadding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .secondaryText,
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                ),
-                                                        elevation: 10.0,
-                                                        borderSide: BorderSide(
-                                                          color: Colors
-                                                              .transparent,
-                                                          width: 1.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                    ),
-                                                  ),
                                                   Expanded(
                                                     child: Padding(
                                                       padding:
@@ -905,10 +807,20 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceAround,
+                                                                              MainAxisAlignment.center,
                                                                           children: [
+                                                                            Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'lyif1ovw' /* Tipo de cambio Dolar */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'Outfit',
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    fontSize: 18.0,
+                                                                                  ),
+                                                                            ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.min,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -949,7 +861,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                                                       children: [
                                                                                         Text(
                                                                                           FFLocalizations.of(context).getText(
-                                                                                            '2zamxllt' /* Tipo de cambio de dolar: */,
+                                                                                            '2zamxllt' /* Compra: */,
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Montserrat',
@@ -970,6 +882,45 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                                                         ),
                                                                                         Text(
                                                                                           TipoCambioDolarCall.compraDolar(
+                                                                                            containerTipoCambioDolarResponse.jsonBody,
+                                                                                          ).toString(),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: Color(0xFF379A37),
+                                                                                              ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                  Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                    child: Row(
+                                                                                      mainAxisSize: MainAxisSize.max,
+                                                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                                                      children: [
+                                                                                        Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'zsz48zzm' /* Venta: */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Montserrat',
+                                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                              ),
+                                                                                        ),
+                                                                                        Padding(
+                                                                                          padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                                                                                          child: Text(
+                                                                                            FFLocalizations.of(context).getText(
+                                                                                              'bpbnoql0' /* $ */,
+                                                                                            ),
+                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                  fontFamily: 'Montserrat',
+                                                                                                  color: Color(0xFF379A37),
+                                                                                                ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Text(
+                                                                                          TipoCambioDolarCall.ventaDolar(
                                                                                             containerTipoCambioDolarResponse.jsonBody,
                                                                                           ).toString(),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(

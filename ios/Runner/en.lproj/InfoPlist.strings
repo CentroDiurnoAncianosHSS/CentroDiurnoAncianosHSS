@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "The app needs to get access to the camera";
+NSPhotoLibraryUsageDescription = "The app needs to get access to Bluetooth";
+PermissionGroupNotification = "The app needs to get access to notifications";
+NSMicrophoneUsageDescription = "The app needs to get access to the microphone";
+NSLocationWhenInUseUsageDescription = "The app needs to get access to the location";
+NSContactsUsageDescription = "The app needs to get access to the contacts";
+NSCalendarsUsageDescription = "The app needs to get access to the calendar";
+NSFaceIDUsageDescription = "The app needs to get security access";
+NSBluetoothAlwaysUsageDescription = "The app needs to get access to Bluetooth";

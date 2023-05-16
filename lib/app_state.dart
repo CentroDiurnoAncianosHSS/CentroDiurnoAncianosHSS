@@ -11,20 +11,14 @@ class FFAppState extends ChangeNotifier {
     return _instance;
   }
 
-  FFAppState._internal() {
-    initializePersistedState();
-  }
+  FFAppState._internal();
 
-  Future initializePersistedState() async {
-    prefs = await SharedPreferences.getInstance();
-  }
+  Future initializePersistedState() async {}
 
   void update(VoidCallback callback) {
     callback();
     notifyListeners();
   }
-
-  late SharedPreferences prefs;
 
   String _ImageUserSignin = '';
   String get ImageUserSignin => _ImageUserSignin;
@@ -42,6 +36,18 @@ class FFAppState extends ChangeNotifier {
   String get imageUserEditAdmin => _imageUserEditAdmin;
   set imageUserEditAdmin(String _value) {
     _imageUserEditAdmin = _value;
+  }
+
+  String _filePath = '';
+  String get filePath => _filePath;
+  set filePath(String _value) {
+    _filePath = _value;
+  }
+
+  String _filePathToDownload = '';
+  String get filePathToDownload => _filePathToDownload;
+  set filePathToDownload(String _value) {
+    _filePathToDownload = _value;
   }
 }
 

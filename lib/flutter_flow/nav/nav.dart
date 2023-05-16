@@ -141,6 +141,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 detalleColaboradores:
                     params.getParam('detalleColaboradores', ParamType.Document),
               ),
+            ),
+            FFRoute(
+              name: 'AdminShareArchives',
+              path: 'adminShareArchives',
+              requireAuth: true,
+              builder: (context, params) => AdminShareArchivesWidget(),
+            ),
+            FFRoute(
+              name: 'CounterListArchives',
+              path: 'counterListArchives',
+              requireAuth: true,
+              builder: (context, params) => CounterListArchivesWidget(),
+            ),
+            FFRoute(
+              name: 'AdminListArchives',
+              path: 'adminListArchives',
+              requireAuth: true,
+              builder: (context, params) => AdminListArchivesWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

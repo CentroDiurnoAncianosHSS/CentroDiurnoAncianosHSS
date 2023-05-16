@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "Приложению необходимо получить доступ к камере";
+NSPhotoLibraryUsageDescription = "Приложению необходимо получить доступ к Bluetooth";
+PermissionGroupNotification = "Приложению необходимо получить доступ к уведомлениям";
+NSMicrophoneUsageDescription = "Приложению необходимо получить доступ к микрофону";
+NSLocationWhenInUseUsageDescription = "Приложению необходимо получить доступ к местоположению";
+NSContactsUsageDescription = "Приложение должно получить доступ к контактам";
+NSCalendarsUsageDescription = "Приложению необходимо получить доступ к календарю";
+NSFaceIDUsageDescription = "Приложение должно получить безопасный доступ";
+NSBluetoothAlwaysUsageDescription = "Приложению необходимо получить доступ к Bluetooth";

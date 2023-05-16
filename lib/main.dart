@@ -23,6 +23,7 @@ void main() async {
   await FFLocalizations.initialize();
 
   final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,

@@ -14,3 +14,9 @@ export '/pages/admin/admin_list_user_admin/admin_list_user_admin_widget.dart'
     show AdminListUserAdminWidget;
 export '/pages/admin/admin_list_user_counter/admin_list_user_counter_widget.dart'
     show AdminListUserCounterWidget;
+export '/pages/admin/admin_share_archives/admin_share_archives_widget.dart'
+    show AdminShareArchivesWidget;
+export '/pages/counter/counter_list_archives/counter_list_archives_widget.dart'
+    show CounterListArchivesWidget;
+export '/pages/admin/admin_list_archives/admin_list_archives_widget.dart'
+    show AdminListArchivesWidget;

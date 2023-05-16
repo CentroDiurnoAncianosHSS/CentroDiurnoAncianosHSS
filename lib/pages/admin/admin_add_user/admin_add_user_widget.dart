@@ -406,43 +406,87 @@ class _AdminAddUserWidgetState extends State<AdminAddUserWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 0.0),
                     child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 5.0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: Container(
-                                width: 120.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/Logo.jpg',
-                                    width: 100.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.safePop();
+                          },
+                          child: Container(
+                            width: 60.0,
+                            height: 25.0,
+                            decoration: BoxDecoration(
+                              color: Color(0x00343434),
                             ),
-                          ],
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Icon(
+                                  Icons.chevron_left,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 24.0,
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'wx1pueym' /* Atrás */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Material(
+                            color: Colors.transparent,
+                            elevation: 5.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Container(
+                              width: 120.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/Logo.jpg',
+                                  width: 100.0,
+                                  height: 100.0,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                   Expanded(
                     child: Padding(
@@ -892,7 +936,7 @@ class _AdminAddUserWidgetState extends State<AdminAddUserWidget> {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Container(
-                                      width: 180.0,
+                                      width: 300.0,
                                       height: 40.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
@@ -913,11 +957,14 @@ class _AdminAddUserWidgetState extends State<AdminAddUserWidget> {
                                           ),
                                           FFLocalizations.of(context).getText(
                                             'f8rwm9mm' /* Contador */,
+                                          ),
+                                          FFLocalizations.of(context).getText(
+                                            'tilbdisr' /* Usuario deshabilitado */,
                                           )
                                         ],
                                         onChanged: (val) => setState(() =>
                                             _model.ddRolUsuarioValue = val),
-                                        width: 180.0,
+                                        width: 300.0,
                                         height: 40.0,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -1576,7 +1623,7 @@ class _AdminAddUserWidgetState extends State<AdminAddUserWidget> {
                                               );
 
                                               context.pushNamedAuth(
-                                                  'AdminUsersPage', mounted);
+                                                  'Login', mounted);
                                             } else {
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
@@ -1604,7 +1651,7 @@ class _AdminAddUserWidgetState extends State<AdminAddUserWidget> {
                                               );
 
                                               context.pushNamedAuth(
-                                                  'AdminUsersPage', mounted);
+                                                  'AdminAddUser', mounted);
                                             }
                                           },
                                           text: FFLocalizations.of(context)

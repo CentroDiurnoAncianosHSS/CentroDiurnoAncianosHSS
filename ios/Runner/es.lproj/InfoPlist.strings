@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "La app necesita obtener acceso a la camara";
+NSPhotoLibraryUsageDescription = "La app necesita obtener acceso a Bluetooth";
+PermissionGroupNotification = "La app necesita obtener acceso a las notificaciones";
+NSMicrophoneUsageDescription = "La app necesita obtener acceso al microfono";
+NSLocationWhenInUseUsageDescription = "La app necesita obtener acceso a la localizacion";
+NSContactsUsageDescription = "La app necesita obtener acceso a los contactos";
+NSCalendarsUsageDescription = "La app necesita obtener acceso al calendario";
+NSFaceIDUsageDescription = "La app necesita obtener acceso a la seguridad";
+NSBluetoothAlwaysUsageDescription = "La app necesita obtener acceso a Bluetooth";
