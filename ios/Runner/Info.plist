@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>CentroDiurnoAncianosHSS</string>
+	<string>CDAHSS</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -46,10 +46,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>centrodiurnoancianoshss.com</string>
+        <string>centrodiurnoancianoshatillosscom</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>centrodiurnoancianoshss</string>
+        <string>centrodiurnoancianoshatilloss</string>
         </array>
         </dict>
     </array>
@@ -66,20 +66,7 @@
     <string>La app necesita obtener acceso a la camara</string>
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>La app necesita obtener acceso a Bluetooth</string>
-	<key>PermissionGroupNotification</key>
-    <string>La app necesita obtener acceso a las notificaciones</string>
-	<key>NSMicrophoneUsageDescription</key>
-    <string>La app necesita obtener acceso al microfono</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>La app necesita obtener acceso a la localizacion</string>
-	<key>NSContactsUsageDescription</key>
-    <string>La app necesita obtener acceso a los contactos</string>
-	<key>NSCalendarsUsageDescription</key>
-    <string>La app necesita obtener acceso al calendario</string>
-	<key>NSFaceIDUsageDescription</key>
-    <string>La app necesita obtener acceso a la seguridad</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-    <string>La app necesita obtener acceso a Bluetooth</string>
+
 
 
 	<key>UILaunchStoryboardName</key>

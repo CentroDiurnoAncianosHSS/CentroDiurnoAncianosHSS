@@ -250,9 +250,9 @@ class _EditUserCounterWidgetState extends State<EditUserCounterWidget>
                                 });
                               },
                               child: Icon(
-                                Icons.add_circle,
+                                Icons.add_photo_alternate_outlined,
                                 color: Color(0xFF757575),
-                                size: 45.0,
+                                size: 35.0,
                               ),
                             ),
                           ),

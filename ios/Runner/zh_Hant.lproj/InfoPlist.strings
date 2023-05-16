@@ -1,9 +1,2 @@
 NSCameraUsageDescription = "該應用程序需要訪問相機";
 NSPhotoLibraryUsageDescription = "該應用程序需要訪問藍牙";
-PermissionGroupNotification = "該應用需要訪問通知";
-NSMicrophoneUsageDescription = "該應用需要訪問麥克風";
-NSLocationWhenInUseUsageDescription = "該應用需要訪問該位置";
-NSContactsUsageDescription = "該應用程序需要訪問聯繫人";
-NSCalendarsUsageDescription = "該應用程序需要訪問日曆";
-NSFaceIDUsageDescription = "該應用需要獲得安全訪問權限";
-NSBluetoothAlwaysUsageDescription = "該應用程序需要訪問藍牙";
