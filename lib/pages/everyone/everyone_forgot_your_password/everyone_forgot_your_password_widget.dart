@@ -143,7 +143,7 @@ class _EveryoneForgotYourPasswordWidgetState
                         children: [
                           Container(
                             width: 300.0,
-                            height: 121.5,
+                            height: 200.0,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,

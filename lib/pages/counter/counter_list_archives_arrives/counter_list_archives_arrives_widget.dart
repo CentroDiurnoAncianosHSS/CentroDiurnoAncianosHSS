@@ -8,19 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'admin_list_archives_model.dart';
-export 'admin_list_archives_model.dart';
+import 'counter_list_archives_arrives_model.dart';
+export 'counter_list_archives_arrives_model.dart';
 
-class AdminListArchivesWidget extends StatefulWidget {
-  const AdminListArchivesWidget({Key? key}) : super(key: key);
+class CounterListArchivesArrivesWidget extends StatefulWidget {
+  const CounterListArchivesArrivesWidget({Key? key}) : super(key: key);
 
   @override
-  _AdminListArchivesWidgetState createState() =>
-      _AdminListArchivesWidgetState();
+  _CounterListArchivesArrivesWidgetState createState() =>
+      _CounterListArchivesArrivesWidgetState();
 }
 
-class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
-  late AdminListArchivesModel _model;
+class _CounterListArchivesArrivesWidgetState
+    extends State<CounterListArchivesArrivesWidget> {
+  late CounterListArchivesArrivesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -28,7 +29,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AdminListArchivesModel());
+    _model = createModel(context, () => CounterListArchivesArrivesModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -46,7 +47,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
     context.watch<FFAppState>();
 
     return Title(
-        title: 'AdminListArchives',
+        title: 'CounterListArchivesArrives',
         color: FlutterFlowTheme.of(context).primary,
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -103,7 +104,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'qck9nhqz' /* Cerrar */,
+                                          'sdcw131e' /* Cerrar */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -131,7 +132,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                '7rsz2t5p' /* Menú */,
+                                'je25mfs8' /* Menú */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -235,50 +236,6 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed('AdminUsersPage');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'a4gkf213' /* Usuarios */,
-                              ),
-                              icon: Icon(
-                                Icons.person,
-                                size: 15.0,
-                              ),
-                              options: FFButtonOptions(
-                                width: 175.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).alternate,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                    ),
-                                elevation: 10.0,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
                             FlutterFlowLanguageSelector(
                               width: 175.0,
                               height: 40.0,
@@ -324,7 +281,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                 context.goNamedAuth('Login', mounted);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'psqdb4jo' /* Cerrar sesión */,
+                                'm8l29kxn' /* Cerrar sesión */,
                               ),
                               icon: Icon(
                                 Icons.logout,
@@ -368,7 +325,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
               automaticallyImplyLeading: true,
               title: Text(
                 FFLocalizations.of(context).getText(
-                  '4f0swght' /* Lista Archivos */,
+                  'xw9feanz' /* Lista de archivos recibidos */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Montserrat',
@@ -415,7 +372,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.safePop();
+                            context.pushNamed('CounterHomePage');
                           },
                           child: Container(
                             width: 60.0,
@@ -434,7 +391,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                 ),
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'wbgr0glu' /* Atrás */,
+                                    '0rbd390y' /* Atrás */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -836,7 +793,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        'tvxv5k11' /* Nombre:  */,
+                                                                        '4bgvdq5w' /* Nombre:  */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -888,7 +845,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        'hsjk66q7' /* Tipo:   */,
+                                                                        '6zfdc80o' /* Tipo:   */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -938,7 +895,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        '7zdx3h3c' /* Fecha:   */,
+                                                                        'waro2pb0' /* Fecha:   */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -1005,8 +962,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                      MainAxisAlignment.center,
                                                   children: [
                                                     InkWell(
                                                       splashColor:
@@ -1028,29 +984,6 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .tertiary,
-                                                        size: 24.0,
-                                                      ),
-                                                    ),
-                                                    InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        await listArchivosFilesRecord
-                                                            .reference
-                                                            .delete();
-                                                      },
-                                                      child: Icon(
-                                                        Icons.delete,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .error,
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -1109,7 +1042,7 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                         context.safePop();
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'thu3xxxg' /* Regresar */,
+                                        'fhfmd4b2' /* Regresar */,
                                       ),
                                       options: FFButtonOptions(
                                         width: 150.0,
@@ -1157,13 +1090,14 @@ class _AdminListArchivesWidgetState extends State<AdminListArchivesWidget> {
                                         5.0, 0.0, 5.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        context.pushNamed('AdminShareArchives');
+                                        context
+                                            .pushNamed('CounterShareArchives');
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        '8nqn4kjf' /* Subir archivo */,
+                                        'vhd4aw8j' /* Compartir */,
                                       ),
                                       icon: Icon(
-                                        Icons.share,
+                                        Icons.share_sharp,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
                                         size: 15.0,

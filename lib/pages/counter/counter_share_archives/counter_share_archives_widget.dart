@@ -13,19 +13,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'admin_share_archives_model.dart';
-export 'admin_share_archives_model.dart';
+import 'counter_share_archives_model.dart';
+export 'counter_share_archives_model.dart';
 
-class AdminShareArchivesWidget extends StatefulWidget {
-  const AdminShareArchivesWidget({Key? key}) : super(key: key);
+class CounterShareArchivesWidget extends StatefulWidget {
+  const CounterShareArchivesWidget({Key? key}) : super(key: key);
 
   @override
-  _AdminShareArchivesWidgetState createState() =>
-      _AdminShareArchivesWidgetState();
+  _CounterShareArchivesWidgetState createState() =>
+      _CounterShareArchivesWidgetState();
 }
 
-class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
-  late AdminShareArchivesModel _model;
+class _CounterShareArchivesWidgetState
+    extends State<CounterShareArchivesWidget> {
+  late CounterShareArchivesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -33,9 +34,9 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AdminShareArchivesModel());
+    _model = createModel(context, () => CounterShareArchivesModel());
 
-    _model.txtNameArchiveController ??= TextEditingController();
+    _model.txtNameArchiveCounterController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -52,7 +53,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
     context.watch<FFAppState>();
 
     return Title(
-        title: 'AdminShareArchives',
+        title: 'CounterShareArchives',
         color: FlutterFlowTheme.of(context).primary,
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -109,7 +110,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '272yg5ji' /* Cerrar */,
+                                          'jf08zdly' /* Cerrar */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -137,7 +138,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'vhmir6er' /* Menú */,
+                                '5xb8t4q2' /* Menú */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -241,50 +242,6 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed('AdminUsersPage');
-                              },
-                              text: FFLocalizations.of(context).getText(
-                                'n1mfriz9' /* Usuarios */,
-                              ),
-                              icon: Icon(
-                                Icons.person,
-                                size: 15.0,
-                              ),
-                              options: FFButtonOptions(
-                                width: 175.0,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).alternate,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                    ),
-                                elevation: 10.0,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
                             FlutterFlowLanguageSelector(
                               width: 175.0,
                               height: 40.0,
@@ -330,7 +287,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                 context.goNamedAuth('Login', mounted);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'umarknfn' /* Cerrar sesión */,
+                                '25qzjitw' /* Cerrar sesión */,
                               ),
                               icon: Icon(
                                 Icons.logout,
@@ -374,7 +331,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
               automaticallyImplyLeading: true,
               title: Text(
                 FFLocalizations.of(context).getText(
-                  '45mxul44' /* Compartir Archivos */,
+                  '1a933y6i' /* Compartir Archivos */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Montserrat',
@@ -443,7 +400,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'kuh98aei' /* Atrás */,
+                                        'ms0x04j8' /* Atrás */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -510,46 +467,46 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   FlutterFlowDropDown<String>(
-                                    controller:
-                                        _model.dDFileTypeValueController ??=
-                                            FormFieldController<String>(
-                                      _model.dDFileTypeValue ??=
+                                    controller: _model
+                                            .dDFileTypeCounterValueController ??=
+                                        FormFieldController<String>(
+                                      _model.dDFileTypeCounterValue ??=
                                           FFLocalizations.of(context).getText(
-                                        'hggbitpx' /* Seleccionar tipo de archivo */,
+                                        '7c6atsff' /* Seleccionar tipo de archivo */,
                                       ),
                                     ),
                                     options: [
                                       FFLocalizations.of(context).getText(
-                                        'kobp2ktp' /* Excel */,
+                                        'efboxf87' /* Excel */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'hlywaucd' /* Word */,
+                                        'iypd02sp' /* Word */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'bz5juzph' /* Txt */,
+                                        'lmsvh41v' /* Txt */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'wnhuir6n' /* PDF */,
+                                        'u52b2730' /* PDF */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        '3gnazj8l' /* Imagen */,
+                                        'vyymb1s7' /* Imagen */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'y67cpqiu' /* Video */,
+                                        'wmcqgi5u' /* Video */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'niocj54v' /* Comprimido */,
+                                        'q99ti580' /* Comprimido */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'beas50my' /* PowerPoint */,
+                                        'vrgbkd5c' /* PowerPoint */,
                                       ),
                                       FFLocalizations.of(context).getText(
-                                        'xx8st9qh' /* Seleccionar tipo de archivo */,
+                                        'zx68g163' /* Seleccionar tipo de archivo */,
                                       )
                                     ],
                                     onChanged: (val) async {
-                                      setState(
-                                          () => _model.dDFileTypeValue = val);
+                                      setState(() =>
+                                          _model.dDFileTypeCounterValue = val);
                                       await showDialog(
                                         context: context,
                                         builder: (alertDialogContext) {
@@ -588,11 +545,11 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                         ),
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      '9mx39keh' /* Por favor seleccione el tipo d... */,
+                                      '9z7jrz0m' /* Por favor seleccione el tipo d... */,
                                     ),
                                     searchHintText:
                                         FFLocalizations.of(context).getText(
-                                      '8x9jxm1o' /* Search for an item... */,
+                                      'wuygyzjd' /* Search for an item... */,
                                     ),
                                     fillColor:
                                         FlutterFlowTheme.of(context).alternate,
@@ -624,14 +581,14 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                   children: [
                                     Expanded(
                                       child: TextFormField(
-                                        controller:
-                                            _model.txtNameArchiveController,
+                                        controller: _model
+                                            .txtNameArchiveCounterController,
                                         autofocus: true,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
                                               .getText(
-                                            '1cm212ch' /* Digite el nombre del archivo */,
+                                            'b6zy8vld' /* Digite el nombre del archivo */,
                                           ),
                                           labelStyle: FlutterFlowTheme.of(
                                                   context)
@@ -644,7 +601,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                               ),
                                           hintText: FFLocalizations.of(context)
                                               .getText(
-                                            '54rnvrga' /* Nombre  del Archivo  */,
+                                            'e2eay0be' /* Nombre  del Archivo  */,
                                           ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
@@ -700,7 +657,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                                       .secondaryText,
                                             ),
                                         validator: _model
-                                            .txtNameArchiveControllerValidator
+                                            .txtNameArchiveCounterControllerValidator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -723,7 +680,8 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                   children: [
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        if (_model.txtNameArchiveController
+                                        if (_model
+                                                .txtNameArchiveCounterController
                                                 .text ==
                                             '') {
                                           await showDialog(
@@ -745,7 +703,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                             },
                                           );
                                         } else {
-                                          if (_model.dDFileTypeValue ==
+                                          if (_model.dDFileTypeCounterValue ==
                                               'Seleccionar tipo de archivo') {
                                             await showDialog(
                                               context: context,
@@ -804,7 +762,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                             }
 
                                             setState(() {
-                                              FFAppState().filePath =
+                                              FFAppState().filePathCounter =
                                                   _model.uploadedFileUrl;
                                             });
                                             if (FFAppState().filePath == '') {
@@ -827,20 +785,22 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                                 },
                                               );
                                             } else {
-                                              final filesCreateData =
-                                                  createFilesRecordData(
+                                              final filesCounterCreateData =
+                                                  createFilesCounterRecordData(
                                                 nameArchive: _model
-                                                    .txtNameArchiveController
+                                                    .txtNameArchiveCounterController
                                                     .text,
-                                                fecha: getCurrentTimestamp,
+                                                date: getCurrentTimestamp,
                                                 urlArchiveUploadPlace:
-                                                    FFAppState().filePath,
-                                                fileType:
-                                                    _model.dDFileTypeValue,
+                                                    FFAppState()
+                                                        .filePathCounter,
+                                                fileType: _model
+                                                    .dDFileTypeCounterValue,
                                               );
-                                              await FilesRecord.collection
+                                              await FilesCounterRecord
+                                                  .collection
                                                   .doc()
-                                                  .set(filesCreateData);
+                                                  .set(filesCounterCreateData);
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
                                                 SnackBar(
@@ -862,14 +822,15 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                                 ),
                                               );
                                               setState(() {
-                                                FFAppState().filePath = '';
+                                                FFAppState().filePathCounter =
+                                                    '';
                                               });
                                             }
                                           }
                                         }
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'mhhkmzbh' /* Subir archivo */,
+                                        'lafqjvod' /* Subir archivo */,
                                       ),
                                       icon: Icon(
                                         Icons.cloud_upload_outlined,
@@ -945,43 +906,7 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                   context.pushNamed('AdminHomePage');
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  'rcygd4gq' /* Regresar */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 130.0,
-                                  height: 40.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Colors.white,
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: 150.0,
-                              height: 40.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                              ),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('AdminListArchivesArrives');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '9xgh749t' /* Lista de archivos */,
+                                  'owhfo621' /* Regresar */,
                                 ),
                                 options: FFButtonOptions(
                                   width: 130.0,

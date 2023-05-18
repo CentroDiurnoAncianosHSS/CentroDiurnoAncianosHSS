@@ -8,19 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'counter_list_archives_model.dart';
-export 'counter_list_archives_model.dart';
+import 'admin_list_archives_arrives_model.dart';
+export 'admin_list_archives_arrives_model.dart';
 
-class CounterListArchivesWidget extends StatefulWidget {
-  const CounterListArchivesWidget({Key? key}) : super(key: key);
+class AdminListArchivesArrivesWidget extends StatefulWidget {
+  const AdminListArchivesArrivesWidget({Key? key}) : super(key: key);
 
   @override
-  _CounterListArchivesWidgetState createState() =>
-      _CounterListArchivesWidgetState();
+  _AdminListArchivesArrivesWidgetState createState() =>
+      _AdminListArchivesArrivesWidgetState();
 }
 
-class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
-  late CounterListArchivesModel _model;
+class _AdminListArchivesArrivesWidgetState
+    extends State<AdminListArchivesArrivesWidget> {
+  late AdminListArchivesArrivesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -28,7 +29,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CounterListArchivesModel());
+    _model = createModel(context, () => AdminListArchivesArrivesModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -46,7 +47,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
     context.watch<FFAppState>();
 
     return Title(
-        title: 'CounterListArchives',
+        title: 'AdminListArchivesArrives',
         color: FlutterFlowTheme.of(context).primary,
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
@@ -103,7 +104,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'sdcw131e' /* Cerrar */,
+                                          'qck9nhqz' /* Cerrar */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -131,7 +132,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'je25mfs8' /* Menú */,
+                                '7rsz2t5p' /* Menú */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -235,6 +236,50 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed('AdminUsersPage');
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'a4gkf213' /* Usuarios */,
+                              ),
+                              icon: Icon(
+                                Icons.person,
+                                size: 15.0,
+                              ),
+                              options: FFButtonOptions(
+                                width: 175.0,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).alternate,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    ),
+                                elevation: 10.0,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
                             FlutterFlowLanguageSelector(
                               width: 175.0,
                               height: 40.0,
@@ -280,7 +325,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                 context.goNamedAuth('Login', mounted);
                               },
                               text: FFLocalizations.of(context).getText(
-                                'm8l29kxn' /* Cerrar sesión */,
+                                'psqdb4jo' /* Cerrar sesión */,
                               ),
                               icon: Icon(
                                 Icons.logout,
@@ -324,7 +369,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
               automaticallyImplyLeading: true,
               title: Text(
                 FFLocalizations.of(context).getText(
-                  'xw9feanz' /* Página Principal */,
+                  '4f0swght' /* Lista Archivos recibidos */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Montserrat',
@@ -371,7 +416,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed('CounterHomePage');
+                            context.safePop();
                           },
                           child: Container(
                             width: 60.0,
@@ -390,7 +435,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                 ),
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '0rbd390y' /* Atrás */,
+                                    'wbgr0glu' /* Atrás */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -451,10 +496,11 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
                           ),
-                          child: StreamBuilder<List<FilesRecord>>(
-                            stream: queryFilesRecord(
-                              queryBuilder: (filesRecord) => filesRecord
-                                  .orderBy('Fecha', descending: true),
+                          child: StreamBuilder<List<FilesCounterRecord>>(
+                            stream: queryFilesCounterRecord(
+                              queryBuilder: (filesCounterRecord) =>
+                                  filesCounterRecord.orderBy('Date',
+                                      descending: true),
                             ),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
@@ -471,15 +517,17 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                   ),
                                 );
                               }
-                              List<FilesRecord> listArchivosFilesRecordList =
+                              List<FilesCounterRecord>
+                                  listArchivosFilesCounterRecordList =
                                   snapshot.data!;
                               return ListView.builder(
                                 padding: EdgeInsets.zero,
                                 scrollDirection: Axis.vertical,
-                                itemCount: listArchivosFilesRecordList.length,
+                                itemCount:
+                                    listArchivosFilesCounterRecordList.length,
                                 itemBuilder: (context, listArchivosIndex) {
-                                  final listArchivosFilesRecord =
-                                      listArchivosFilesRecordList[
+                                  final listArchivosFilesCounterRecord =
+                                      listArchivosFilesCounterRecordList[
                                           listArchivosIndex];
                                   return Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -525,7 +573,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                   children: [
                                                     Stack(
                                                       children: [
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Excel')
                                                           ClipRRect(
@@ -554,7 +602,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Word')
                                                           ClipRRect(
@@ -583,7 +631,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Txt')
                                                           ClipRRect(
@@ -612,7 +660,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'PDF')
                                                           ClipRRect(
@@ -641,7 +689,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Imagen')
                                                           ClipRRect(
@@ -670,7 +718,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Video')
                                                           ClipRRect(
@@ -699,7 +747,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'Comprimido')
                                                           ClipRRect(
@@ -728,7 +776,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                        if (listArchivosFilesRecord
+                                                        if (listArchivosFilesCounterRecord
                                                                 .fileType ==
                                                             'PowerPoint')
                                                           ClipRRect(
@@ -792,7 +840,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        '4bgvdq5w' /* Nombre:  */,
+                                                                        'tvxv5k11' /* Nombre:  */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -809,7 +857,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                           ),
                                                                     ),
                                                                     Text(
-                                                                      listArchivosFilesRecord
+                                                                      listArchivosFilesCounterRecord
                                                                           .nameArchive!,
                                                                       textAlign:
                                                                           TextAlign
@@ -844,7 +892,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        '6zfdc80o' /* Tipo:   */,
+                                                                        'hsjk66q7' /* Tipo:   */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -859,7 +907,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                           ),
                                                                     ),
                                                                     Text(
-                                                                      listArchivosFilesRecord
+                                                                      listArchivosFilesCounterRecord
                                                                           .fileType!,
                                                                       textAlign:
                                                                           TextAlign
@@ -894,7 +942,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        'waro2pb0' /* Fecha:   */,
+                                                                        '7zdx3h3c' /* Fecha:   */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -911,8 +959,8 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                                     Text(
                                                                       dateTimeFormat(
                                                                         'yMMMd',
-                                                                        listArchivosFilesRecord
-                                                                            .fecha!,
+                                                                        listArchivosFilesCounterRecord
+                                                                            .date!,
                                                                         locale:
                                                                             FFLocalizations.of(context).languageCode,
                                                                       ),
@@ -974,7 +1022,7 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         await launchURL(
-                                                            listArchivosFilesRecord
+                                                            listArchivosFilesCounterRecord
                                                                 .urlArchiveUploadPlace!);
                                                       },
                                                       child: Icon(
@@ -1041,7 +1089,64 @@ class _CounterListArchivesWidgetState extends State<CounterListArchivesWidget> {
                                         context.safePop();
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'fhfmd4b2' /* Regresar */,
+                                        'thu3xxxg' /* Regresar */,
+                                      ),
+                                      options: FFButtonOptions(
+                                        width: 150.0,
+                                        height: 40.0,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.normal,
+                                            ),
+                                        elevation: 5.0,
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Material(
+                                color: Colors.transparent,
+                                elevation: 10.0,
+                                child: Container(
+                                  width: 150.0,
+                                  height: 40.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0x00343434),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 0.0, 5.0, 0.0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        context.pushNamed('AdminShareArchives');
+                                      },
+                                      text: FFLocalizations.of(context).getText(
+                                        '8nqn4kjf' /* Compartir */,
+                                      ),
+                                      icon: Icon(
+                                        Icons.share_sharp,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 15.0,
                                       ),
                                       options: FFButtonOptions(
                                         width: 150.0,

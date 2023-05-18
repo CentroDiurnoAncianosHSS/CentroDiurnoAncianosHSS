@@ -49,6 +49,18 @@ class FFAppState extends ChangeNotifier {
   set filePathToDownload(String _value) {
     _filePathToDownload = _value;
   }
+
+  String _filePathCounter = '';
+  String get filePathCounter => _filePathCounter;
+  set filePathCounter(String _value) {
+    _filePathCounter = _value;
+  }
+
+  String _filePathToDownloadCounter = '';
+  String get filePathToDownloadCounter => _filePathToDownloadCounter;
+  set filePathToDownloadCounter(String _value) {
+    _filePathToDownloadCounter = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

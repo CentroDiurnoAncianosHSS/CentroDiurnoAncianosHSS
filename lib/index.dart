@@ -16,7 +16,13 @@ export '/pages/admin/admin_list_user_counter/admin_list_user_counter_widget.dart
     show AdminListUserCounterWidget;
 export '/pages/admin/admin_share_archives/admin_share_archives_widget.dart'
     show AdminShareArchivesWidget;
-export '/pages/counter/counter_list_archives/counter_list_archives_widget.dart'
-    show CounterListArchivesWidget;
-export '/pages/admin/admin_list_archives/admin_list_archives_widget.dart'
-    show AdminListArchivesWidget;
+export '/pages/counter/counter_list_archives_arrives/counter_list_archives_arrives_widget.dart'
+    show CounterListArchivesArrivesWidget;
+export '/pages/admin/admin_list_archives_arrives/admin_list_archives_arrives_widget.dart'
+    show AdminListArchivesArrivesWidget;
+export '/pages/counter/counter_share_archives/counter_share_archives_widget.dart'
+    show CounterShareArchivesWidget;
+export '/pages/counter/counter_list_archives_sent/counter_list_archives_sent_widget.dart'
+    show CounterListArchivesSentWidget;
+export '/pages/admin/admin_list_archives_sent/admin_list_archives_sent_widget.dart'
+    show AdminListArchivesSentWidget;

@@ -366,7 +366,7 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
               automaticallyImplyLeading: true,
               title: Text(
                 FFLocalizations.of(context).getText(
-                  'fiye4eu3' /* Principal Administrador */,
+                  'fiye4eu3' /* Página Principal Admin */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Montserrat',
@@ -545,7 +545,7 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
                                           'zexnb3ec' /* Compartir archivos */,
                                         ),
                                         icon: Icon(
-                                          Icons.share,
+                                          Icons.share_sharp,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           size: 20.0,
@@ -588,7 +588,7 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  60.0, 80.0, 60.0, 0.0),
+                                  60.0, 50.0, 60.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -610,15 +610,15 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
                                       ),
                                       child: FFButtonWidget(
                                         onPressed: () async {
-                                          context
-                                              .pushNamed('AdminListArchives');
+                                          context.pushNamed(
+                                              'AdminListArchivesArrives');
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'lpj1yqpr' /* Lista de archivos */,
+                                          'lpj1yqpr' /* Lista de archivos recibidos */,
                                         ),
                                         icon: Icon(
-                                          Icons.list_alt_outlined,
+                                          Icons.archive,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           size: 15.0,
@@ -661,7 +661,80 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  60.0, 80.0, 60.0, 0.0),
+                                  60.0, 50.0, 60.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Material(
+                                    color: Colors.transparent,
+                                    elevation: 5.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Container(
+                                      width: 250.0,
+                                      height: 40.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          context.pushNamed(
+                                              'AdminListArchivesArrives');
+                                        },
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'wnggy5ew' /* Lista de archivos enviados */,
+                                        ),
+                                        icon: Icon(
+                                          Icons.send,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 15.0,
+                                        ),
+                                        options: FFButtonOptions(
+                                          width: 250.0,
+                                          height: 40.0,
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          iconPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 10.0, 0.0),
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .titleSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondary,
+                                                fontSize: 16.0,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                          elevation: 5.0,
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  60.0, 50.0, 60.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
