@@ -1133,14 +1133,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Возвращаться',
       'zh_Hant': '回去',
     },
-    '9xgh749t': {
-      'es': 'Lista de archivos',
-      'en': 'file list',
-      'fr': 'liste de fichiers',
-      'it': 'elenco file',
-      'ru': 'список файлов',
-      'zh_Hant': '檔案清單',
-    },
     'jglniszk': {
       'es': 'Home',
       'en': 'home',

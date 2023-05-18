@@ -969,42 +969,6 @@ class _AdminShareArchivesWidgetState extends State<AdminShareArchivesWidget> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: 150.0,
-                              height: 40.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                              ),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('AdminListArchivesArrives');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '9xgh749t' /* Lista de archivos */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 130.0,
-                                  height: 40.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Colors.white,
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                       ),

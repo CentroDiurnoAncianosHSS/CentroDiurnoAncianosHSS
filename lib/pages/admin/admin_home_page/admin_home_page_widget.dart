@@ -684,7 +684,7 @@ class _AdminHomePageWidgetState extends State<AdminHomePageWidget> {
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           context.pushNamed(
-                                              'AdminListArchivesArrives');
+                                              'AdminListArchivesSent');
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
